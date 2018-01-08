@@ -1,13 +1,13 @@
 extends RigidBody
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+export (PackedScene) var CannonParticles
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
+	var canPart = CannonParticles.instance()
+	canPart.one_shot = true
+	canPart.emitting = false
+	canPart.translate(Vector3(0,0,4))
+	$mesh/turret.add_child(canPart)
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
