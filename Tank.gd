@@ -14,5 +14,8 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
-#func _integrate_forces(state):
-	#apply_torqe_impulse(Vector3(1,0,0))
+func _integrate_forces(state):
+	#angular_velocity = Vector3(0,1,0)
+	#apply_impulse(Vector3(1,0,0),Vector3(10,0,0))
+	#apply_impulse(Vector3(-1,0,0),Vector3(-10,0,0))
+	

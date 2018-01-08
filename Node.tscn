@@ -77,10 +77,10 @@ axis_lock_angular_y = false
 axis_lock_angular_z = false
 linear_velocity = Vector3( 0, 0, 0 )
 linear_damp = 0.99
-angular_velocity = Vector3( 10, 0, 0 )
-angular_damp = 1.0
+angular_velocity = Vector3( 0, 0, 0 )
+angular_damp = 0.0
 script = ExtResource( 2 )
-_sections_unfolded = [ "Angular", "Linear", "Transform" ]
+_sections_unfolded = [ "Angular", "Axis Lock", "Linear", "Transform" ]
 
 [node name="mesh" parent="Tank" index="0" instance=ExtResource( 3 )]
 
