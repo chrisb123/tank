@@ -14,8 +14,8 @@ func _process(delta):
 	if Input.is_action_pressed("ui_down"):
 		$Tank.apply_impulse(Vector3(),Vector3(0,0,1))
 	if Input.is_action_pressed("ui_right"):
-		$Tank/mesh/Cube_001.rotate_y(1*delta)
+		$Tank/mesh/Cube_001.rotate_y(-1*delta)
 	if Input.is_action_pressed("ui_left"):
-		$Tank/mesh/Cube_001.rotate_y(-1*delta)	
+		$Tank/mesh/Cube_001.rotate_y(1*delta)	
 	
 	

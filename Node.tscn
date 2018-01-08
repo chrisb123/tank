@@ -9,9 +9,9 @@ script = ExtResource( 1 )
 
 [node name="Camera" type="Camera" parent="." index="0"]
 
-transform = Transform( 0.766917, 0.167351, -0.619542, 0.00177409, 0.964843, 0.262821, 0.641744, -0.202661, 0.739657, -9.58287, 2.35244, 9.02572 )
-keep_aspect = 0
-vaspect = false
+transform = Transform( 0.769632, 0.0734294, -0.634251, 0.00805669, 0.992169, 0.124644, 0.638437, -0.10104, 0.763013, -9.58287, 2.35244, 9.02572 )
+keep_aspect = 1
+vaspect = true
 cull_mask = 1048575
 environment = null
 h_offset = 0.0
@@ -80,7 +80,7 @@ angular_velocity = Vector3( 0, 0, 0 )
 angular_damp = 1.0
 _sections_unfolded = [ "Angular", "Linear" ]
 
-[node name="mesh" type="Spatial" parent="Tank" index="0" instance=ExtResource( 2 )]
+[node name="mesh" parent="Tank" index="0" instance=ExtResource( 2 )]
 
 _sections_unfolded = [ "Transform" ]
 
