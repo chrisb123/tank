@@ -78,7 +78,7 @@ axis_lock_angular_z = false
 linear_velocity = Vector3( 0, 0, 0 )
 linear_damp = 0.99
 angular_velocity = Vector3( 0, 0, 0 )
-angular_damp = 0.0
+angular_damp = -1.0
 script = ExtResource( 2 )
 _sections_unfolded = [ "Angular", "Axis Lock", "Linear", "Transform" ]
 
