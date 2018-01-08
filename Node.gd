@@ -25,4 +25,5 @@ func _physics_process(delta):
 		$Tank/mesh/turret.rotate_y(1.5*delta)	
 	if Input.is_action_pressed("e"):
 		$Tank/mesh/turret.rotate_y(-1.5*delta)	
-		
+	if Input.is_action_just_pressed("ui_select"):
+		$Tank/mesh/Particles.emitting = true
