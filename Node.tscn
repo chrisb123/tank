@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Node.gd" type="Script" id=1]
 [ext_resource path="res://Tank.gd" type="Script" id=2]
 [ext_resource path="res://CannonParticles.tscn" type="PackedScene" id=3]
 [ext_resource path="res://untitled.dae" type="PackedScene" id=4]
 [ext_resource path="res://Camera.gd" type="Script" id=5]
+
+[sub_resource type="BoxShape" id=1]
+
+extents = Vector3( 1.19411, 0.39568, 2.73425 )
 
 [node name="Node" type="Node" index="0"]
 
@@ -47,7 +51,7 @@ mode = 0
 mass = 1.0
 friction = 1.0
 bounce = 0.0
-gravity_scale = 0.0
+gravity_scale = 1.0
 custom_integrator = false
 continuous_cd = false
 contacts_reported = 0
@@ -90,18 +94,24 @@ near = 0.05
 far = 100.0
 script = ExtResource( 5 )
 
+[node name="CollisionShape" type="CollisionShape" parent="Tank" index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02617, 0 )
+shape = SubResource( 1 )
+disabled = false
+
 [node name="Tank2" type="RigidBody" parent="." index="2"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.19688, 0, -19.8193 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.22955, 0, -31.8083 )
 input_ray_pickable = true
 input_capture_on_drag = false
 collision_layer = 1
 collision_mask = 1
 mode = 0
 mass = 1.0
-friction = 1.0
+friction = 0.1
 bounce = 0.0
-gravity_scale = 0.0
+gravity_scale = 1.0
 custom_integrator = false
 continuous_cd = false
 contacts_reported = 0
@@ -117,7 +127,7 @@ axis_lock_angular_z = false
 linear_velocity = Vector3( 0, 0, 0 )
 linear_damp = 0.99
 angular_velocity = Vector3( 0, 0, 0 )
-angular_damp = -1.0
+angular_damp = 0.99
 script = ExtResource( 2 )
 _sections_unfolded = [ "Angular", "Axis Lock", "Linear", "Transform" ]
 CannonParticles = ExtResource( 3 )
@@ -125,5 +135,29 @@ CannonParticles = ExtResource( 3 )
 [node name="mesh" parent="Tank2" index="0" instance=ExtResource( 4 )]
 
 _sections_unfolded = [ "Transform" ]
+
+[node name="Camera" type="Camera" parent="Tank2" index="1"]
+
+transform = Transform( 0.769632, 0.0734294, -0.634251, 0.00805669, 0.992169, 0.124644, 0.638437, -0.10104, 0.763013, -9.58287, 2.35244, 9.02572 )
+keep_aspect = 1
+vaspect = true
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+script = ExtResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Tank2" index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02617, 0 )
+shape = SubResource( 1 )
+disabled = false
 
 
