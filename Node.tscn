@@ -1,32 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Node.gd" type="Script" id=1]
 [ext_resource path="res://Tank.gd" type="Script" id=2]
 [ext_resource path="res://CannonParticles.tscn" type="PackedScene" id=3]
 [ext_resource path="res://untitled.dae" type="PackedScene" id=4]
+[ext_resource path="res://Camera.gd" type="Script" id=5]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
-[node name="Camera" type="Camera" parent="." index="0"]
-
-transform = Transform( 0.769632, 0.0734294, -0.634251, 0.00805669, 0.992169, 0.124644, 0.638437, -0.10104, 0.763013, -9.58287, 2.35244, 9.02572 )
-keep_aspect = 1
-vaspect = true
-cull_mask = 1048575
-environment = null
-h_offset = 0.0
-v_offset = 0.0
-doppler_tracking = 0
-projection = 0
-current = false
-fov = 70.0
-size = 1.0
-near = 0.05
-far = 100.0
-
-[node name="DirectionalLight" type="DirectionalLight" parent="." index="1"]
+[node name="DirectionalLight" type="DirectionalLight" parent="." index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.71198, 0, 0 )
 layers = 1
@@ -53,7 +37,7 @@ directional_shadow_bias_split_scale = 0.25
 directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
 
-[node name="Tank" type="RigidBody" parent="." index="2"]
+[node name="Tank" type="RigidBody" parent="." index="1"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -85,6 +69,60 @@ _sections_unfolded = [ "Angular", "Axis Lock", "Linear", "Transform" ]
 CannonParticles = ExtResource( 3 )
 
 [node name="mesh" parent="Tank" index="0" instance=ExtResource( 4 )]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Camera" type="Camera" parent="Tank" index="1"]
+
+transform = Transform( 0.769632, 0.0734294, -0.634251, 0.00805669, 0.992169, 0.124644, 0.638437, -0.10104, 0.763013, -9.58287, 2.35244, 9.02572 )
+keep_aspect = 0
+vaspect = false
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+script = ExtResource( 5 )
+
+[node name="Tank2" type="RigidBody" parent="." index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.19688, 0, -19.8193 )
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = false
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+axis_lock_linear_x = false
+axis_lock_linear_y = false
+axis_lock_linear_z = false
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+linear_velocity = Vector3( 0, 0, 0 )
+linear_damp = 0.99
+angular_velocity = Vector3( 0, 0, 0 )
+angular_damp = -1.0
+script = ExtResource( 2 )
+_sections_unfolded = [ "Angular", "Axis Lock", "Linear", "Transform" ]
+CannonParticles = ExtResource( 3 )
+
+[node name="mesh" parent="Tank2" index="0" instance=ExtResource( 4 )]
 
 _sections_unfolded = [ "Transform" ]
 
