@@ -13,8 +13,6 @@ func _ready():
 
 func _process(delta):
 	if ray.is_enabled():
-		print("ray enabled")
-		#doing something wrong here
 		if ray.is_colliding():
 			print("hit")
 

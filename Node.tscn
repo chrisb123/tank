@@ -8,7 +8,7 @@
 
 [sub_resource type="BoxShape" id=1]
 
-extents = Vector3( 1.19411, 0.39568, 2.73425 )
+extents = Vector3( 1.19411, 2.92523, 2.73425 )
 
 [node name="Node" type="Node"]
 
@@ -79,15 +79,15 @@ _sections_unfolded = [ "Transform" ]
 [node name="Camera" type="Camera" parent="Tank" index="1"]
 
 transform = Transform( 0.769632, 0.0734294, -0.634251, 0.00805669, 0.992169, 0.124644, 0.638437, -0.10104, 0.763013, -9.58287, 2.35244, 9.02572 )
-keep_aspect = 1
-vaspect = true
+keep_aspect = 0
+vaspect = false
 cull_mask = 1048575
 environment = null
 h_offset = 0.0
 v_offset = 0.0
 doppler_tracking = 0
 projection = 0
-current = false
+current = true
 fov = 70.0
 size = 1.0
 near = 0.05
@@ -96,7 +96,7 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Tank" index="2"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02617, 0 )
+transform = Transform( 0.999899, -0.0142066, 0, 0.0142066, 0.999899, 0, 0, 0, 1, 0, 3.07852, 0 )
 shape = SubResource( 1 )
 disabled = false
 
@@ -139,8 +139,8 @@ _sections_unfolded = [ "Transform" ]
 [node name="Camera" type="Camera" parent="Tank2" index="1"]
 
 transform = Transform( 0.769632, 0.0734294, -0.634251, 0.00805669, 0.992169, 0.124644, 0.638437, -0.10104, 0.763013, -9.58287, 2.35244, 9.02572 )
-keep_aspect = 0
-vaspect = false
+keep_aspect = 1
+vaspect = true
 cull_mask = 1048575
 environment = null
 h_offset = 0.0
@@ -156,7 +156,7 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Tank2" index="2"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02617, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.30056, 0 )
 shape = SubResource( 1 )
 disabled = false
 
