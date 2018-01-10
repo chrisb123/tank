@@ -1,6 +1,7 @@
 extends RigidBody
 
 export (PackedScene) var CannonParticles
+var ray
 
 func _ready():
 	var canPart = CannonParticles.instance()
@@ -8,11 +9,15 @@ func _ready():
 	canPart.emitting = false
 	canPart.translate(Vector3(0,0,4))
 	$mesh/turret.add_child(canPart)
+	ray = canPart.get_node("Shot")
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _process(delta):
+	if ray.is_enabled():
+		print("ray enabled")
+		#doing something wrong here
+		if ray.is_colliding():
+			print("hit")
+
 
 func _integrate_forces(state):
 	#angular_velocity = Vector3(0,1,0)

@@ -11,6 +11,7 @@ func _ready():
 func _process(delta):
 	pass
 	
+	
 func _physics_process(delta):
 	var y = deg2rad($Tank/mesh.rotation_degrees.y)
 	if Input.is_action_pressed("ui_up"):
