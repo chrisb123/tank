@@ -4,9 +4,10 @@
 
 [node name="Scene Root" instance=ExtResource( 1 )]
 
-[node name="Camera" parent="." index="0"]
+_sections_unfolded = [ "Transform" ]
 
-keep_aspect = 0
-vaspect = false
+[node name="base" parent="." index="0"]
+
+_sections_unfolded = [ "Geometry", "Transform" ]
 
 

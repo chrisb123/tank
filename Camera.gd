@@ -11,7 +11,7 @@ func _ready():
 	
 func _process(delta):
 
-	var offset = Vector3(0,7,10)
+	var offset = Vector3(0,7,20)
 	
 	rotation = get_parent().get_node("mesh").get_rotation()
 	

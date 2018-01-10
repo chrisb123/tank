@@ -1,6 +1,8 @@
 extends RigidBody
 
 export (PackedScene) var CannonParticles
+export (PackedScene) var Shell
+
 var ray
 
 func _ready():
@@ -26,7 +28,11 @@ func _physics_process(delta):
 	if Input.is_action_pressed("e"):
 		$mesh/turret.rotate_y(-1.5*delta)	
 	if Input.is_action_just_pressed("ui_select"):
-		$mesh/turret/Particles.emitting = true
+		#$mesh/turret/Particles.emitting = true
+		var CanShell = Shell.instance()
+		#var Muzzle = $mesh/turret.transform
+		#CanShell.transform = Muzzle
+		$mesh/turret.add_child(CanShell)
 
 func _process(delta):
 	if ray.is_enabled():
