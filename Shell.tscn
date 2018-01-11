@@ -23,7 +23,7 @@ gravity_scale = 1.0
 custom_integrator = false
 continuous_cd = false
 contacts_reported = 0
-contact_monitor = true
+contact_monitor = false
 sleeping = false
 can_sleep = true
 axis_lock_linear_x = false
@@ -37,7 +37,7 @@ linear_damp = -1.0
 angular_velocity = Vector3( 0, 0, 0 )
 angular_damp = -1.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Transform" ]
+_sections_unfolded = [ "Angular", "Collision", "Linear", "Transform" ]
 
 [node name="mesh" parent="Shell" index="0" instance=ExtResource( 2 )]
 

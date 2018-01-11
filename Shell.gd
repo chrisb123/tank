@@ -7,16 +7,17 @@ extends RigidBody
 func _ready():
 
 	
-	var y = deg2rad($mesh.rotation_degrees.y)
-	
-	var tform = get_parent().get_parent().get_global_transform()
-	self.translation = tform.xform(Vector3(0,0,-4))
-	var x = tform.xform(Vector3(0,0,-100))
+	#var y = deg2rad($mesh.rotation_degrees.y)
+	translation += Vector3(0,0,-4)
+	#var tform = get_parent().get_parent().get_global_transform()
+	#self.translation = tform.xform(Vector3(0,0,-4))
+	#var x = tform.xform(Vector3(0,0,-100))
+	apply_impulse(Vector3(),to_local(Vector3(0,0,-100)))
 	
 	#pleas write this better, its using the Tanks Mesh.
 	#transform = get_parent().get_parent().get_parent().get_global_transform()
 	#apply_impulse(Vector3(),Vector3(0,0,-100))
-	apply_impulse(Vector3(),x)
+	
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.

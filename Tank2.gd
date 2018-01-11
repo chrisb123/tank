@@ -30,9 +30,9 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_select"):
 		#$mesh/turret/Particles.emitting = true
 		var CanShell = Shell.instance()
-		#var Muzzle = $mesh/turret.transform
-		#CanShell/Shell.translate(Vector3(0,0,4))
-		$mesh/turret.add_child(CanShell)
+		CanShell.get_node("Shell").global_transform = $mesh/turret.global_transform
+		add_child(CanShell)
+
 
 func _process(delta):
 	if ray.is_enabled():
