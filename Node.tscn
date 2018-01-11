@@ -103,8 +103,8 @@ _sections_unfolded = [ "Transform" ]
 [node name="Camera" type="Camera" parent="Tank" index="1"]
 
 transform = Transform( 0.769632, 0.0734294, -0.634251, 0.00805669, 0.992169, 0.124644, 0.638437, -0.10104, 0.763013, -9.58287, 2.35244, 9.02572 )
-keep_aspect = 0
-vaspect = false
+keep_aspect = 1
+vaspect = true
 cull_mask = 1048575
 environment = null
 h_offset = 0.0
@@ -163,8 +163,8 @@ _sections_unfolded = [ "Transform" ]
 [node name="Camera" type="Camera" parent="Tank2" index="1"]
 
 transform = Transform( 0.769632, 0.0734294, -0.634251, 0.00805669, 0.992169, 0.124644, 0.638437, -0.10104, 0.763013, -9.58287, 2.35244, 9.02572 )
-keep_aspect = 1
-vaspect = true
+keep_aspect = 0
+vaspect = false
 cull_mask = 1048575
 environment = null
 h_offset = 0.0

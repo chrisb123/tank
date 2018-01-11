@@ -31,7 +31,7 @@ func _physics_process(delta):
 		#$mesh/turret/Particles.emitting = true
 		var CanShell = Shell.instance()
 		#var Muzzle = $mesh/turret.transform
-		#CanShell.transform = Muzzle
+		#CanShell/Shell.translate(Vector3(0,0,4))
 		$mesh/turret.add_child(CanShell)
 
 func _process(delta):

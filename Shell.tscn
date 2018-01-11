@@ -39,9 +39,9 @@ angular_damp = -1.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="mesh" type="Spatial" parent="Shell" index="0" instance=ExtResource( 2 )]
+[node name="mesh" parent="Shell" index="0" instance=ExtResource( 2 )]
 
-transform = Transform( 0.2, 0, 0, 0, -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, 0, 0, 0 )
+transform = Transform( 0.199999, 0.000339039, 0.000490242, -0.000490929, 0.000405431, 0.199999, 0.000338044, -0.199999, 0.000406261, 0, 0, 0 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="Shell" index="1"]
@@ -49,5 +49,15 @@ _sections_unfolded = [ "Transform" ]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.186859 )
 shape = SubResource( 1 )
 disabled = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="Timer" type="Timer" parent="Shell" index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Shell/Timer" to="Shell" method="_on_Timer_timeout"]
 
 
