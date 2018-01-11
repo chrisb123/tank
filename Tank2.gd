@@ -14,15 +14,15 @@ func _ready():
 	ray = canPart.get_node("Shot")
 
 func _physics_process(delta):
-	var y = deg2rad($mesh.rotation_degrees.y)
+	var y = deg2rad(self.rotation_degrees.y)
 	if Input.is_action_pressed("ui_up"):
 		apply_impulse(Vector3(),Vector3(0,0,-1).rotated(Vector3(0,1,0),y))
 	if Input.is_action_pressed("ui_down"):
 		apply_impulse(Vector3(),Vector3(0,0,1).rotated(Vector3(0,1,0),y))
 	if Input.is_action_pressed("ui_right"):
-		$mesh.rotate(Vector3(0,1,0),-1*delta)
+		rotate(Vector3(0,1,0),-1*delta)
 	if Input.is_action_pressed("ui_left"):
-		$mesh.rotate(Vector3(0,1,0),1*delta)
+		rotate(Vector3(0,1,0),1*delta)
 	if Input.is_action_pressed("q"):
 		$mesh/turret.rotate_y(1.5*delta)	
 	if Input.is_action_pressed("e"):
