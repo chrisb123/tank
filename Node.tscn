@@ -33,7 +33,7 @@ func _integrate_forces(state):
 	#apply_impulse(Vector3(-1,0,0),Vector3(-10,0,0))
 	pass"
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -90,7 +90,7 @@ axis_lock_angular_z = true
 linear_velocity = Vector3( 0, 0, 0 )
 linear_damp = 0.99
 angular_velocity = Vector3( 0, 0, 0 )
-angular_damp = -1.0
+angular_damp = 0.5
 script = ExtResource( 2 )
 _sections_unfolded = [ "Angular", "Axis Lock", "Linear", "Transform" ]
 CannonParticles = ExtResource( 3 )
@@ -103,8 +103,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="Camera" type="Camera" parent="Tank" index="1"]
 
 transform = Transform( 0.769632, 0.0734294, -0.634251, 0.00805669, 0.992169, 0.124644, 0.638437, -0.10104, 0.763013, -9.58287, 2.35244, 9.02572 )
-keep_aspect = 1
-vaspect = true
+keep_aspect = 0
 cull_mask = 1048575
 environment = null
 h_offset = 0.0
@@ -163,8 +162,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="Camera" type="Camera" parent="Tank2" index="1"]
 
 transform = Transform( 0.769632, 0.0734294, -0.634251, 0.00805669, 0.992169, 0.124644, 0.638437, -0.10104, 0.763013, -9.58287, 2.35244, 9.02572 )
-keep_aspect = 0
-vaspect = false
+keep_aspect = 1
 cull_mask = 1048575
 environment = null
 h_offset = 0.0
